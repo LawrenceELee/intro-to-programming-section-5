@@ -55,7 +55,12 @@ function checkGuess() {
 	const remainingAttempts = maxNumberOfAttempts - attempts;
 
 	numberOfGuessesMessage.style.display = '';
-	numberOfGuessesMessage.innerHTML = `You guessed ${guess}. <br> ${remainingAttempts} guesses remaining`;
+	
+	if ( remainingAttempts === 1 ) {
+		numberOfGuessesMessage.innerHTML = `You guessed ${guess}. <br> ${remainingAttempts} guess remaining`;
+	} else {
+		numberOfGuessesMessage.innerHTML = `You guessed ${guess}. <br> ${remainingAttempts} guesses remaining`;
+	}		
 
   }
 
